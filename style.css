@@ -166,3 +166,57 @@ svg {
     z-index: 1;
     margin-block-start: 20px;
 }
+
+.header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px 25px;
+}
+
+.header__home {
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
+    line-height: 1;
+    color: var(--text1);
+    text-decoration: none;
+    flex: 1 0 100%;
+}
+
+.header__social > svg > path {
+    transition: fill --transition;
+}
+
+.header__social:hover > svg > path {
+    fill: var(--accent);
+}
+
+@media (min-width: 37.5em) {
+    .header {
+        margin-block-start: 30px;
+    }
+
+    .header__nav {
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        gap: 32px;
+    }
+
+    .header__home {
+        flex: 0 1 auto;
+        margin-inline-end: auto;
+    }
+}
+
+@media (min-width: 62.5em) {
+    .header {
+        margin-block-start: 40px;
+        margin-block-end: 127px;
+    }
+
+    .header__nav {
+        padding-right: 30px;
+    }
+}
